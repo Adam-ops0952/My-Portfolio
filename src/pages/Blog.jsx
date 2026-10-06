@@ -5,6 +5,7 @@ const Blog = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     fetchBlogs();
@@ -13,7 +14,7 @@ const Blog = () => {
   const fetchBlogs = async () => {
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/api/blogs"
+        `${API_URL}/api/services/`
       );
 
       if (!response.ok) {
@@ -55,9 +56,9 @@ const Blog = () => {
     }
 
     if (image.startsWith("/media/")) {
-      return `http://127.0.0.1:8000${image}`;
+      return `${API_URL}${image}`;
     }
-    return `http://127.0.0.1:8000/media/${image}`
+    return `${API_URL}/media/${image}`
   };
 
   return (

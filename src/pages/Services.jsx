@@ -5,12 +5,13 @@ function Services() {
     const [services, setServices] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const API_URL = import.meta.env.VITE_API_URL;
 
     useEffect(() => {
         const fetchServices = async () => {
             try {
                 const response = await fetch(
-                    "http://127.0.0.1:8000/api/services/"
+                    `${API_URL}/api/services/`
                 );
 
                 if (!response.ok) {
