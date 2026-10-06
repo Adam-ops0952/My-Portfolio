@@ -31,4 +31,5 @@ media/
 .vscode/
 
 venv/
+.env
 env
