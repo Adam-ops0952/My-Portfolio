@@ -87,7 +87,7 @@ const Blog = () => {
               </div>
 
               <p className="blog-text">
-                {blog.content.length > 150
+                {blog.content?.length > 150
                   ? `${blog.content.substring(
                       0,
                       150
