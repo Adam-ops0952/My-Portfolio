@@ -18,13 +18,4 @@ def blog_list(request):
     blogs = Blog.objects.all()
     serializer = BlogSerializer(blogs, many=True)
     return Response(serializer.data)
-#def home(request):
- #   return JsonResponse({
-  #      "message": "API working"
-   # })
-#
-#urlpatterns = [
- #   path('', home),
-  #  path('admin/', admin.site.urls),
-   # path('api/', include('api.urls')),
-#
+
