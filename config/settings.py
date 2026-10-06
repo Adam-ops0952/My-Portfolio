@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5zvlkeo-tyy_9xoks$9k!f8y2&v$vm1m-k6w03(5-rn^i5599f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", "False") == "True"
+DEBUG = os.getenv("DEBUG", "False").lower() == "True"
 
 ALLOWED_HOSTS = [
-  "https://my-portfolio-79us.onrender.com/"
+  "my-portfolio-79us.onrender.com"
   "localhost",
   "127.0.0.1",
   ]
