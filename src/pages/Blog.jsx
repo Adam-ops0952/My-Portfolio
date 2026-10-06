@@ -56,9 +56,9 @@ const Blog = () => {
     }
 
     if (image.startsWith("/media/")) {
-      return `${API_URL}${image}/`;
+      return `${API_URL}${image}`;
     }
-    return `${API_URL}/media/${image}/`
+    return `${API_URL}/media/${image}`
   };
 
   return (
