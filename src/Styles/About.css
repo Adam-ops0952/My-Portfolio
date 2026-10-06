@@ -1,0 +1,74 @@
+/* About page */
+.about {
+  background: #0b1220;
+  color: #ffffff;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+/* Hero */
+.about-hero {
+  padding: 70px 20px 30px;
+  text-align: center;
+  background: linear-gradient(180deg, #111a33, #0b1220);
+}
+
+.about-hero h1 {
+  margin: 0 0 12px;
+  font-size: clamp(28px, 4vw, 44px);
+}
+
+.about-hero p {
+  margin: 0 auto;
+  max-width: 720px;
+  color: #cbd5e1;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.about-small {
+  margin-top: 12px;
+  opacity: 0.95;
+  font-size: 1rem;
+}
+
+/* Section cards */
+.about-section {
+  padding: 30px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.about-card {
+  background: #111a33;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.about-card h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.about-card p {
+  margin: 0;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-section {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+}

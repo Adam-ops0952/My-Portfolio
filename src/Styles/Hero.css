@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  min-height: 100vh;
+  background: #f4f4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 8%;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.Hero-avatar {
+  width: 200px;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.hero-left h1 span {
+  color: #374151;
+}
+
+.hero-left h2 {
+  font-size: 2rem;
+  color: #d1d5db;
+  margin-bottom: 15px;
+}
+
+.hero-left p {
+  color: #4b5563;
+  line-height: 1.8;
+  max-width: 420px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: #374151;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #1f2937;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  color: #9ca3af;
+}
+
+.btn-secondary:hover {
+  background: white;
+}
+
+.hero-center {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 430px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.speech-bubble {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  background: #4b5563;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.hero-right {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+.stats-card {
+  width: 320px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.stat span {
+  color: #6b7280;
+}
+
+.stat strong {
+  color: #374151;
+}
+
+.available {
+  color: #10b981;
+}
+
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .stats-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .speech-bubble {
+    font-size: 1.0rem;
+    right: 100px;
+    top: 0px;
+  }
+
+  .Hero-avatar {
+  width: 180px;
+}
+}
