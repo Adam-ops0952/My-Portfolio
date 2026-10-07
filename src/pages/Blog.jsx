@@ -74,7 +74,7 @@ const Blog = () => {
             
             <div className="blog-content">
               <h2 className="blog-title">
-                {blog.title}
+                {blog.title} Hassan Adam
               </h2>
 
               <div className="blog-meta">
