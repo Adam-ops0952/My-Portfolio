@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-5zvlkeo-tyy_9xoks$9k!f8y2&v$vm1m-k6w03(5-rn^i5599f
 DEBUG = os.getenv("DEBUG", "False").lower() == "True"
 
 ALLOWED_HOSTS = [
-    "my-portfolio-79us.onrender.com",
+    "api.homecomfot.com",
     "localhost",
     "127.0.0.1",
 ]
@@ -87,11 +87,14 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
 
 DATABASES = {
-    "default": dj_database_url.config(
-        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
-        conn_max_age=600,
-        conn_health_checks=True,
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'homecomf_portfolio_db',
+        'USER': 'homecomf_hassan_auth',
+        'PASSWORD': '05612662Ab@.com',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
 }
 
 
@@ -132,6 +135,15 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "https://tech.homecomfot.com",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://tech.homecomfot.com",
+    "https://api.homecomfot.com",
+]
 
 
 # Email
