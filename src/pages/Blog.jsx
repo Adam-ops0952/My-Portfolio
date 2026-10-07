@@ -14,7 +14,7 @@ const Blog = () => {
   const fetchBlogs = async () => {
     try {
       const response = await fetch(
-        `${API_URL}/api/blog/`
+        `${API_URL}/api/blogs/`
       );
 
       if (!response.ok) {

@@ -11,7 +11,7 @@ function Services() {
         const fetchServices = async () => {
             try {
                 const response = await fetch(
-                    `${API_URL}/api/service/`
+                    `${API_URL}/api/services/`
                 );
 
                 if (!response.ok) {
