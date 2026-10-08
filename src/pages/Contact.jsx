@@ -72,6 +72,7 @@ function Contact() {
           <input
             type="text"
             value={formData.name}
+            placeholder="Name"
             onChange={(e) =>
               setFormData({...formData, name: e.target.value})
             }
@@ -80,6 +81,7 @@ function Contact() {
           <input
             type="email"
             value={formData.email}
+            placeholder="Email"
             onChange={(e) =>
               setFormData({...formData, email: e.target.value})
             }
@@ -88,6 +90,7 @@ function Contact() {
           <input
             type="text"
             value={formData.subject}
+            placeholder="Subject"
             onChange={(e) =>
               setFormData({...formData, subject: e.target.value})
             }
@@ -96,6 +99,7 @@ function Contact() {
           <input
             type="text"
             value={formData.message}
+            placeholder="Write message"
             onChange={(e) =>
               setFormData({...formData, message: e.target.value})
             }
