@@ -1,0 +1,21 @@
+# Django backend files
+requirements.txt
+manage.py
+passenger_wsgi.py
+db.sqlite3
+
+# Django folders
+config/
+api/
+media/
+staticfiles/
+
+# Python files
+*.py
+*.pyc
+__pycache__/
+venv/
+.venv/
+
+# Secrets
+.env
