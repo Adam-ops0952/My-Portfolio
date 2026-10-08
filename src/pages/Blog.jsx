@@ -69,7 +69,7 @@ const Blog = () => {
         {blogs.map((blog) => (
           <div className="blog-card" key={blog.id}>
             <div className="blog-image-container">
-              <img className="blog-image" src={`${API_URL}${blog.image}/`} alt={blog.title}/>
+              <img className="blog-image" src={`${API_URL}${blog.image}`} alt={blog.title}/>
             </div>
             
             <div className="blog-content">
