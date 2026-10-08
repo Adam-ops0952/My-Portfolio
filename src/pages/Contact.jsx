@@ -1,6 +1,45 @@
 import "../Styles/Contact.css";
 
 function Contact() {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+
+      try {
+        const response = await fetch(
+          "https://api.homecomfot.com/api/contact/",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
+
+        if (response.ok) {
+          alert("Message sent successfully!");
+
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+
   return (
     <section className="contact">
       <div className="contact-container">
@@ -27,18 +66,38 @@ function Contact() {
           </div>
         </div>
 
-        <form className="contact-form">
-          <input type="text" placeholder="Your Name" required />
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={formData.name}
+            onChange={(e) =>
+              setFormData({...formData, name: e.target.value})
+            }
+          />
 
-          <input type="email" placeholder="Your Email" required />
+          <input
+            type="email"
+            value={formData.email}
+            onChange={(e) =>
+              setFormData({...formData, email: e.target.value})
+            }
+          />
 
-          <input type="text" placeholder="Subject" required />
+          <input
+            type="text"
+            value={formData.subject}
+            onChange={(e) =>
+              setFormData({...formData, subject: e.target.value})
+            }
+          />
 
-          <textarea
-            rows="6"
-            placeholder="Your Message"
-            required
-          ></textarea>
+          <input
+            type="text"
+            value={formData.message}
+            onChange={(e) =>
+              setFormData({...formData, message: e.target.value})
+            }
+          />
 
           <button type="submit">Send Message</button>
         </form>
