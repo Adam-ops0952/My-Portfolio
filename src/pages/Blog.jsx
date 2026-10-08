@@ -77,6 +77,27 @@ const Blog = () => {
                 {blog.title} Hassan Adam
               </h2>
 
+              <h2
+                  className="blog-title"
+                  style={{
+                    display: "block",
+                    color: "#111111",
+                    WebkitTextFillColor: "#111111",
+                    background: "none",
+                    WebkitBackgroundClip: "border-box",
+                    backgroundClip: "border-box",
+                    opacity: 1,
+                    visibility: "visible",
+                    fontSize: "24px",
+                    fontWeight: 700,
+                    lineHeight: 1.3,
+                    height: "auto",
+                    margin: "0 0 15px 0",
+                  }}
+                >
+                  {blog.title}
+                </h2>
+
               <div className="blog-meta">
                 <span>By {blog.author}</span>
                 <span>
