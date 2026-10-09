@@ -48,13 +48,20 @@ function Services() {
     }
 
     return (
-        <section className="services-section">
-            <h1 className="section-title">Our Services</h1>
+        <section className="services-page">
+            <div className="services-header">
+                <span>WHAT I OFFER</span>
+                <h1>My Services</h1>
+                <p>Building modern, scalable and secure applications.</p>
+
+            </div>
+            
 
             <div className="services-grid">
                 {services.map((service) => (
                     <div className="service1-card" key={service.id}>
-                        <h2>{service.title}</h2>
+                        <div className="service-icon">{service.icon}</div>
+                        <h3>{service.title}</h3>
                         <p>{service.description}</p>
                     </div>
                 ))}
