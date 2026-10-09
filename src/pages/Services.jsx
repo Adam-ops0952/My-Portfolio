@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../Styles/Services.css";
+import { motion } from "framer-motion";
 
 function Services() {
     const [services, setServices] = useState([]);
@@ -59,11 +60,17 @@ function Services() {
 
             <div className="services-grid">
                 {services.map((service) => (
-                    <div className="service1-card" key={service.id}>
+                    <motion.div 
+                        className="service1-card" 
+                        key={service.id} 
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        >
                         <div className="service-icon">🌐</div>
                         <h3>{service.title}</h3>
                         <p>{service.description}</p>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </section>
