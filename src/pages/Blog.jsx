@@ -5,6 +5,7 @@ const Blog = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [expandedBlog, setExpandedBlog] = useState(null);
   const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
@@ -87,17 +88,24 @@ const Blog = () => {
               </div>
 
               <p className="blog-text">
-                {blog.content?.length > 150
-                  ? `${blog.content.substring(
-                      0,
-                      150
-                    )}...`
-                  : blog.content}
+                {expandedBlog === blog.id
+                  ? blog.content
+                  : blog.content?.length > 150
+                    ? `${blog.content.substring(0, 150)}...`
+                    : blog.content}
               </p>
-
-              <button className="read-more-btn">
-                Read More
-              </button>
+              <button
+                  className="read-more-btn"
+                  onClick={() =>
+                    setExpandedBlog(
+                      expandedBlog === blog.id ? null : blog.id
+                    )
+                  }
+                >
+                  {expandedBlog === blog.id
+                    ? "Read Less"
+                    : "Read More"}
+                </button>
             </div>
           </div>
         ))}

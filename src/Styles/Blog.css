@@ -83,6 +83,7 @@
 .blog-text {
   color: #444;
   line-height: 1.6;
+  transition: all 0.3s ease;
 }
 
 .read-more-btn {

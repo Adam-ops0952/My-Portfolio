@@ -33,11 +33,18 @@ function Footer() {
           </p>
 
           <div className="social-icons">
-            <FaGithub size={20} />
-            <FaLinkedinIn size={20} />
-             <FaInstagram size={20} />
-             <Mail size={20} />
-             
+    
+              https://github.com/YOUR\_GITHUB\_USERNAME
+                <FaGithub size={20} />
+
+              https://linkedin.com/in/YOUR\_LINKEDIN\_USERNAME
+                <FaLinkedinIn size={20} />
+
+              https://instagram.com/YOUR\_INSTAGRAM\_USERNAME
+                <FaInstagram size={20} />
+
+              yourgmail@gmail.com
+                <Mail size={20} />
           </div>
         </div>
 
@@ -53,7 +60,7 @@ function Footer() {
 
 
         <div className="footer-links">
-          <h3>Services</h3>
+          <p>Services</p>
           Web Development
           UI/UX Design
           React Applications
