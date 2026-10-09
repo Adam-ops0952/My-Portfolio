@@ -56,17 +56,17 @@ function Contact() {
 
           <div className="info">
             <h3>📍 Address</h3>
-            <p>Accra, Ghana</p>
+            <p>Tamale, Ghana</p>
           </div>
 
           <div className="info">
             <h3>📧 Email</h3>
-            <p>info@mywebsite.com</p>
+            <p>alert@homecomfot.com</p>
           </div>
 
           <div className="info">
             <h3>📞 Phone</h3>
-            <p>+233 20 123 4567</p>
+            <p>+233 20 220 3515</p>
           </div>
         </div>
 
