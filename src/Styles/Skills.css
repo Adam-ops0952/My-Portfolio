@@ -63,3 +63,62 @@
   );
   border-radius: 10px;
 }
+
+
+/* Tablet */
+@media (max-width: 992px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 60px 5%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .section-title h2 {
+    font-size: 1.7rem;
+  }
+
+  .section-title h5 {
+    font-size: 0.8rem;
+  }
+
+  .skill-top {
+    font-size: 0.95rem;
+  }
+
+  .skill-icon {
+    font-size: 20px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 50px 20px;
+  }
+
+  .section-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .skill-top {
+    font-size: 0.85rem;
+  }
+
+  .progress-bar {
+    height: 5px;
+  }
+}
