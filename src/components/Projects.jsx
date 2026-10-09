@@ -72,7 +72,7 @@ function Projects() {
                 {project.project_url}
                   View Project →
               </div>
-            </div>
+            </motion.div>
           </SwiperSlide>
         ))}
       </Swiper>
