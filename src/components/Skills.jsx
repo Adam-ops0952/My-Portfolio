@@ -4,13 +4,15 @@ import {
   FaCss3Alt,
   FaJs,
   FaReact,
-  FaNodeJs,
+  FaPython,
   FaGitAlt,
+  FaLink,
 } from "react-icons/fa";
 
 import {
-  SiNextdotjs,
-  SiTypescript,
+  SiDjango,
+  SiPostgresql,
+  SiMysql,
   SiTailwindcss,
 } from "react-icons/si";
 
@@ -21,10 +23,11 @@ function Skills() {
     { name: "JavaScript", percent: 90, icon: <FaJs />, color: "#F7DF1E" },
 
     { name: "React.js", percent: 85, icon: <FaReact />, color: "#61DAFB" },
-    { name: "Next.js", percent: 80, icon: <SiNextdotjs />, color: "#FFFFFF" },
-    { name: "TypeScript", percent: 85, icon: <SiTypescript />, color: "#3178C6" },
-
-    { name: "Node.js", percent: 80, icon: <FaNodeJs />, color: "#3C873A" },
+    { name: "Python", percent: 80, icon: <FaPython />, color: "#3776AB", },
+    { name: "Django", percent: 85, icon: <SiDjango />, color: "#092E20",},
+    { name: "PostgreSQL", percent: 75, icon: <SiPostgresql />, color: "#336791",},
+    { name: "MySQL", percent: 80, icon: <SiMysql />, color: "#4479A1", },
+    { name: "REST APIs", percent: 80, icon: <FaLink />, color: "#7B61FF",},
     { name: "Tailwind CSS", percent: 90, icon: <SiTailwindcss />, color: "#38BDF8" },
     { name: "Git", percent: 85, icon: <FaGitAlt />, color: "#F05032" },
   ];
