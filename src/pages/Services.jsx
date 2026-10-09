@@ -60,7 +60,7 @@ function Services() {
             <div className="services-grid">
                 {services.map((service) => (
                     <div className="service1-card" key={service.id}>
-                        <div className="service-icon">{service.icon}</div>
+                        <div className="service-icon">🌐</div>
                         <h3>{service.title}</h3>
                         <p>{service.description}</p>
                     </div>
