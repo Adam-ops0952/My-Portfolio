@@ -73,7 +73,8 @@
   right: 10px;
 
   width: 30%;
-  background: rgba(15, 23, 42, 0.95);
+  /*background: rgba(15, 23, 42, 0.95);*/
+  background: white;
 
   display: flex;
   flex-direction: column;
