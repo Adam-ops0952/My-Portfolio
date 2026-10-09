@@ -1,6 +1,7 @@
 import "../Styles/Home.css";
 import Hero from "../components/Hero.jsx";
 import Services1 from "../components/Services.jsx";
+import Skills from "../components/Skills";
 
 
 function Home() {
@@ -25,6 +26,10 @@ function Home() {
           <h3>Secure</h3>
           <p>Your data is protected with industry-standard security.</p>
         </div>
+      </section>
+
+      <section>
+        <Skills />
       </section>
 
       <section>
