@@ -53,7 +53,7 @@
    SERVICE CARD
 =================================== */
 
-.service-card {
+.service1-card {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.1);
 
@@ -73,7 +73,7 @@
    CARD HOVER EFFECT
 =================================== */
 
-.service-card:hover {
+.service1-card:hover {
   transform: translateY(-12px);
 
   border-color: #6c63ff;
@@ -110,13 +110,13 @@
    TEXT
 =================================== */
 
-.service-card h3 {
+.service1-card h3 {
   color: white;
   margin-bottom: 15px;
   font-size: 24px;
 }
 
-.service-card p {
+.service1-card p {
   color: #b5b5b5;
   line-height: 1.8;
 }
@@ -126,7 +126,7 @@
    ANIMATED BORDER GLOW
 =================================== */
 
-.service-card::before {
+.service1-card::before {
   content: "";
 
   position: absolute;
@@ -144,7 +144,7 @@
   transition: .5s ease;
 }
 
-.service-card:hover::before {
+.service1-card:hover::before {
   transform: scale(1.4);
 }
 
