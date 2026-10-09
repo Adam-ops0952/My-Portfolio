@@ -16,7 +16,7 @@ function Contact() {
 
       try {
         const response = await fetch(
-          "https://api.homecomfot.com/api/contact/",
+          `${API_URL}/api/contact/`,
           {
             method: "POST",
             headers: {
