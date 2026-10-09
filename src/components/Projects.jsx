@@ -62,7 +62,7 @@ function Projects() {
                 {String(index + 1).padStart(2, "0")}
               </div>
 
-              {project.image}
+              <img src={`${API_URL}${project.image}`} alt="" />
 
               <div className="project-content">
                 <h3>{project.title}</h3>
