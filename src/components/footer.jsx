@@ -57,10 +57,13 @@ function Footer() {
 
         <div className="footer-links">
           <p>Services</p>
-          Web Development
-          UI/UX Design
-          React Applications
-          Responsive Design
+          <p>
+            Web Development
+            UI/UX Design
+            React Applications
+            Responsive Design
+          </p>
+         
         </div>
       </div>
 
