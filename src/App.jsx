@@ -1,7 +1,8 @@
 
-import { BrowserRouter } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/footer";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import './App.css'
 
@@ -9,10 +10,9 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       <Footer />
-    </BrowserRouter>
     </>
   )
 }
