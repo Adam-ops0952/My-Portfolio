@@ -1,12 +1,13 @@
 .services {
   min-height: 60vh;
   padding: 80px 8%;
-  background: linear-gradient(
+  background-color: #050b1c;
+/*  background: linear-gradient(
     135deg,
     #041322,
     #071d33,
     #0a2540
-  );
+  ); */
   color: white;
 }
 
