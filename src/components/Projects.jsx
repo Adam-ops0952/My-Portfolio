@@ -69,7 +69,7 @@ function Projects() {
 
                 <p>{project.description}</p>
 
-                {project.project_url}
+                {project.project_url}{  }
                   View Project →
               </div>
             </motion.div>
