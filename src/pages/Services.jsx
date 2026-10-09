@@ -53,7 +53,7 @@ function Services() {
 
             <div className="services-grid">
                 {services.map((service) => (
-                    <div className="service-card" key={service.id}>
+                    <div className="service1-card" key={service.id}>
                         <h2>{service.title}</h2>
                         <p>{service.description}</p>
                     </div>
