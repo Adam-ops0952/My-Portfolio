@@ -73,7 +73,7 @@
   right: 10px;
 
   width: 30%;
-  /*background: rgba(15, 23, 42, 0.95);*/
+  background: rgba(15, 23, 42, 0.95);
   background: white;
 
   display: flex;
@@ -94,7 +94,7 @@
 .mobile-menu a {
   padding: 15px 25px;
   text-decoration: none;
-  color: white;
+  /*color: white;*/
   border-bottom: 1px solid #eee;
 }
 
