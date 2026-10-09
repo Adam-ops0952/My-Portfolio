@@ -4,6 +4,8 @@ import "../Styles/Contact.css";
 
 function Contact() {
 
+  const [buttonStatus, setButtonStatus] = useState("idle");
+
   const API_URL = import.meta.env.VITE_API_URL;
 
   const [formData, setFormData] = useState({
@@ -13,35 +15,53 @@ function Contact() {
     message: "",
   });
 
-  const handleSubmit = async (e) => {
-      e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-      try {
-        const response = await fetch(
-          `${API_URL}/api/contact/`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-          }
+    setButtonStatus("sending");
+
+    try {
+      const response = await fetch(`${API_URL}/api/contact/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data.message || "The message could not be sent."
         );
-
-        if (response.ok) {
-          alert("Message sent successfully!");
-
-          setFormData({
-            name: "",
-            email: "",
-            subject: "",
-            message: "",
-          });
-        }
-      } catch (error) {
-        console.error(error);
       }
-    };
+
+      setButtonStatus("success");
+
+      // Clear the form after successful submission
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+
+      // Return to "Send Message" after 4 seconds
+      setTimeout(() => {
+        setButtonStatus("idle");
+      }, 4000);
+    } catch (error) {
+      console.error("Contact form error:", error);
+
+      setButtonStatus("error");
+
+      // Return to "Send Message" after 4 seconds
+      setTimeout(() => {
+        setButtonStatus("idle");
+      }, 4000);
+    }
+  };
 
 
   return (
@@ -107,7 +127,16 @@ function Contact() {
             }
           />
 
-          <button type="submit">Send Message</button>
+          <button
+            type="submit"
+            disabled={buttonStatus === "sending"}
+            className={`submit-button ${buttonStatus}`}
+          >
+            {buttonStatus === "idle" && "Send Message"}
+            {buttonStatus === "sending" && "Sending..."}
+            {buttonStatus === "success" && "Message Sent ✓"}
+            {buttonStatus === "error" && "Failed. Try Again"}
+          </button>
         </form>
       </div>
     </section>

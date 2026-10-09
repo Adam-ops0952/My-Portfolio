@@ -37,7 +37,7 @@ function Home() {
         <Services1 />
       </section>
 
-      <section>
+      <section id="projects">
         <Projects />
       </section>
     </div>

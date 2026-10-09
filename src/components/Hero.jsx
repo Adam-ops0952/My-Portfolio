@@ -1,8 +1,11 @@
 import React from "react";
 import "../Styles/Hero.css";
-import Avatar01 from "../assets/Avatar01.png"
+import Avatar01 from "../assets/Avatar01.png";
+import { useNavigate } from "react-router-dom";
+
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section className="hero">
       <div className="hero-content">
@@ -19,8 +22,18 @@ const Hero = () => {
           </p>
 
           <div className="hero-buttons">
-            <button className="btn-primary">View Projects</button>
-            <button className="btn-secondary">Contact Me</button>
+            <button 
+            className="btn-primary"
+             onClick={() => {
+              document.getElementById("projects").scrollIntoView({
+                behavior: "smooth"
+              });
+            }}>
+              View Projects
+            </button>
+            <button className="btn-secondary" onClick={() => navigate("/contact")}>
+              Contact Me
+            </button>
           </div>
         </div>
 
@@ -39,12 +52,12 @@ const Hero = () => {
 
             <div className="stat">
               <span>Projects</span>
-              <strong>20+</strong>
+              <strong>5+</strong>
             </div>
 
             <div className="stat">
               <span>Clients</span>
-              <strong>30+</strong>
+              <strong>6+</strong>
             </div>
 
             <div className="stat">
