@@ -25,17 +25,17 @@
     transition: 0.3s ease;
 }
 
-.service-card:hover {
+.service1-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.service-card h2 {
+.service1-card h2 {
     color: #0066ff;
     margin-bottom: 15px;
 }
 
-.service-card p {
+.service1-card p {
     color: #555;
     line-height: 1.7;
 }
